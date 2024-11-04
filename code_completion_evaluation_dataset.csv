@@ -1,0 +1,1419 @@
+Prefix,Middle,Suffix,Generated_Middle_10,Generated_Middle,Pass@10,Levenshtein_Distance,Execution_Pass,Syntax_Match,BLEU_Score
+"def dfs(source,visited,adjacency_list):
+    visited[source] = True
+    for child in adjacency_list[source]:
+        if not visited[child]:
+            dfs(child,visited,adjacency_list)
+","def count_components(adjacency_list,size):","    count = 0
+    visited = [False]*(size+1)
+    for i in range(1,size+1):
+        if not visited[i]:
+            dfs(i,visited,adjacency_list)
+            count+=1
+    return count
+
+def main():
+    node_count,edge_count = map(int, input(""Enter the Number of Nodes and Edges \n"").split(' '))
+    adjacency = [[] for _ in range(node_count+1)]
+    for _ in range(edge_count):
+        print(""Enter the edge's Nodes in form of `source target`\n"")
+        source,target = map(int,input().split(' '))
+        adjacency[source].append(target)
+        adjacency[target].append(source)
+    print(""Total number of Connected Components are : "", count_components(adjacency,node_count))
+","['count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Edges connected to you:""))\n\n    # Add the edges and connections to a random node.\n    # random_node.connect_random(6)\n\n    # Print the count of each node.\n    # 1,2,3,4 is', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Edges: ""))\n    adjacency_list=[] # a bit of node indices\n    visited_length =0\n    node_counter=0\n    edge_counter=0\n    while node_count < edge_count:\n        adjacency_list.', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Nodes [1, 2, 4, 8]: ""))\n    print (""Your tree is"",node_count,"","",edge_count,"")"")\n    print (edge_count,""edges"")\n    print (node_count*2+1,""', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Nodes/Edges, the IDs of the two edges - 1 = Continue on Graphic""))\n    #print(node_count,edge_count)\n    print(node_count)\n    #print(node_count,edge_count)', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Nodes, Edges and Ways: 1. Create an undirected graph: ""))\n\n    a = list(filter(lambda x: x!= None, node_count))\n    a.sort()\n\n    edges=[]\n    new_edges = []', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of nodes you would like to count off the network. ""))  \n    count_edges,count_iter = dfs(node_count, edge_count,input(""Do you want to count the number of times the network is "" + str(node', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of nodes you want: ""))\n    nodes = [count-1 for i in range(1,node_count+1)]\n    edges = 0\n\n    # print (""Count: ""+str(count))\n    # print(""Highest Eulers:', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Nodes:  ""))\n    print node_count, edge_count, node_count-1\n    if node_count == 0 or edge_count == 0:\n        print ""Enter something more!""\n        while True:\n           node_count=0', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of Nodes: ""))\n    if (node_count == 0 and edge_count == 0):\n        count = count_path(node_count)\n    i=count_node(node_count)\n    j=count_path(node_count', 'count = 0\n    visited = [False]*(size+1)\n    for i in range(1,size+1):\n        if not visited[i]:\n            dfs(i,visited,adjacency_list)\n            count+=1\n    return count\n\ndef main():\n    node_count,edge_count = map(int, input(""Enter the Number of (x,y) pairs of vertices:\\n"").split()))\n    # count = count+1\n    count = 0\n    visited = [False]*(size+1)\n    for x in range(3):\n        for y in range(3']","count = 0
+    visited = [False]*(size+1)
+    for i in range(1,size+1):
+        if not visited[i]:
+            dfs(i,visited,adjacency_list)
+            count+=1
+    return count
+
+def main():
+    node_count,edge_count = map(int, input(""Enter the Number of Edges connected to you:""))
+
+    # Add the edges and connections to a random node.
+    # random_node.connect_random(6)
+
+    # Print the count of each node.
+    # 1,2,3,4 is",False,396,False,False,1.9251944283874052
+"def max_path_sum(root):
+    maximum = float(""-inf"")
+    helper(root, maximum)
+    return maximum
+
+
+def helper(root, maximum):
+    if root is None:",        return 0,"    left = helper(root.left, maximum)
+    right = helper(root.right, maximum)
+    maximum = max(maximum, left+right+root.val)
+    return root.val + maximum
+","['', '', '', '', '', '', '', '', '', '']",,False,16,True,False,0.0
+"def search_rotate(array, val):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if val == array[mid]:
+            return mid
+
+        if array[low] <= array[mid]:
+            if array[low] <= val <= array[mid]:
+                high = mid - 1
+            else:
+                low = mid + 1
+        else:
+            if array[mid] <= val <= array[high]:
+                low = mid + 1
+            else:
+                high = mid - 1
+
+    return -1
+
+def search_rotate_recur(array, low, high, val):
+    if low >= high:
+        return -1
+    mid = (low + high) // 2
+    if val == array[mid]:  
+        return mid
+    if array[low] <= array[mid]:
+        if array[low] <= val <= array[mid]:","            return search_rotate_recur(array, low, mid - 1, val) ","        return search_rotate_recur(array, mid + 1, high, val)  
+    if array[mid] <= val <= array[high]:
+        return search_rotate_recur(array, mid + 1, high, val) 
+    return search_rotate_recur(array, low, mid - 1, val)  
+","['', '', '', '', '', '', '', '', '', '']",,False,65,True,False,0.0
+"def shell_sort(arr):
+    n = len(arr)
+    gap = n//2
+    
+    while gap > 0:
+        y_index = gap
+        while y_index < len(arr):
+            y = arr[y_index]
+            x_index = y_index - gap
+            while x_index >= 0 and y < arr[x_index]:
+                arr[x_index + gap] = arr[x_index]
+                x_index = x_index - gap",            arr[x_index + gap] = y,"            y_index = y_index + 1
+        gap = gap//2
+        
+    return arr
+","['', '', '', '', '', '', '', '', '', '']",,False,34,True,False,0.0
+"class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+
+def serialize(root):
+    def build_string(node):
+        if node:",            vals.append(str(node.val)),"            build_string(node.left)
+            build_string(node.right)
+        else:
+            vals.append(""#"")
+    vals = []
+    build_string(root)
+    return "" "".join(vals)
+
+
+def deserialize(data):
+    def build_tree():
+        val = next(vals)
+        if val == ""#"":
+            return None
+        node = TreeNode(int(val))
+        node.left = build_tree()
+        node.right = build_tree()
+        return node
+    vals = iter(data.split())
+    return build_tree()
+","['build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        for _node in TreeFromStringsReader(data):\n            _node_is_left = _node.is_left()\n            assert _node_is_left[_node_type(0)],\\\n                   ""Unexpected node"",str(_', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        else:\n            if val == ""\\n"":\n                val = "" "".join(vals)\n            return (val.lower(), [])\n\n    root = build_tree()\n    if root:\n        nodes = []\n        for line in data:\n            if', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None, None\n        else:\n            if val == "")"":\n                val = None\n            else:\n                try:\n                    val = int(val)\n                except: \n                    val = None\n        left = list(vals)\n        left.remove(root)', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        else:\n            return int((val)) - 1\n    root = TreeNode(data)\n    d, childs = root.left, build_tree if hasattr(root, ""left"") else build_tree()\n    d_child =', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        else:\n            return TreeNode(val)  # [0-9A-Za-z]\n    return deserialize(data[tree.pos :]), build_tree()\n\n\nclass Solution:\n    # @param root: The root', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        else:\n            if val == \'(\':  return TreeNode(""("")\n            elif val == \'[\':  return deserialize("":("")\n            elif val == \'\':  return ""]""\n            elif val == \'())\': return None\n            else:', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        left = Node(val)\n        left.left = right = Node(val)\n        return left\n\n    def deserialize(node):\n        return node.right\n\n    def build_list():\n        vals = []\n        left = []\n        right = []', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n\n        def add_node():\n            if val == """":\n                return (None, [])\n            val = next(vals)\n            if val == ""#"":\n                val = (None, [])\n\n            val[int(node.id)] = node = ([],', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        vals.append(val)\n        return val\n\n    root = build_tree()                       # make sure we have ""root""\n    node = None\n    tree = [root]\n    while val!= "";"":\n        obj, attr = next(data', 'build_string(node.left)\n            build_string(node.right)\n        else:\n            vals.append(""#"")\n    vals = []\n    build_string(root)\n    return "" "".join(vals)\n\n\ndef deserialize(data):\n    def build_tree():\n        val = next(vals)\n        if val == ""#"":\n            return None\n        else:\n            node = Node(val)\n            return None\n    root = build_tree()\n    d1 = {}\n    d2 = build_tree()\n    d1 = deserialize(data[0])\n    d2 = deserialize(data']","build_string(node.left)
+            build_string(node.right)
+        else:
+            vals.append(""#"")
+    vals = []
+    build_string(root)
+    return "" "".join(vals)
+
+
+def deserialize(data):
+    def build_tree():
+        val = next(vals)
+        if val == ""#"":
+            return None
+        for _node in TreeFromStringsReader(data):
+            _node_is_left = _node.is_left()
+            assert _node_is_left[_node_type(0)],\
+                   ""Unexpected node"",str(_",False,435,False,False,3.0875102492403745
+"class Dijkstra():
+    def __init__(self, vertex_count):
+        self.vertex_count = vertex_count
+        self.graph = [[0 for _ in range(vertex_count)] for _ in range(vertex_count)]
+
+    def min_distance(self, dist, min_dist_set):
+        min_dist = float(""inf"")
+        for target in range(self.vertex_count):
+            if min_dist_set[target]:
+                continue
+            if dist[target] < min_dist:",                min_dist = dist[target],"                min_index = target
+        return min_index
+
+    def dijkstra(self, src):
+        dist = [float(""inf"")] * self.vertex_count
+        dist[src] = 0
+        min_dist_set = [False] * self.vertex_count
+
+        for _ in range(self.vertex_count):
+            source = self.min_distance(dist, min_dist_set)
+
+            min_dist_set[source] = True
+
+            for target in range(self.vertex_count):
+                if self.graph[source][target] <= 0 or min_dist_set[target]:
+                    continue
+                if dist[target] > dist[source] + self.graph[source][target]:
+                    dist[target] = dist[source] + self.graph[source][target]
+
+        return dist
+","['min_index = target\n        return min_index\n\n    def dijkstra_step1(self,a,b):\n        # Start the optimization.\n        f, self.graph = a+b,b\n        # Then try to find a good index.\n        min_index = self.find_good_index', 'min_index = target\n        return min_index\n\n    def dijkstra_in_rectangle( self, rA, tA, min_length=None, max_length=None ):\n        """"""\n        Parameters :\n\n        """"""     \n        \n        width_limit = rA - rA\n\n        width = width_limit /', ""min_index = target\n        return min_index\n\n    def dijkstra_sort_keys(self):\n        pass\n\n##    def get_min_max_index(self):\n##       return self.config.get('dijkstra_index_min', 0.001)\n##       #"", 'min_index = target\n        return min_index\n\n    def dijkstra(self, start, start_index):        # dijkstra_find_indexes\n        for i in range(start[start_index],start[start_index+1]):\n            min_dist_set = self.find_all', 'min_index = target\n        return min_index\n\n    def dijkstra_index(this_array):\n        """"""\n\t#include: ""dijkstra_table.hpp""\n\t#include: ""dijkstra_table2.h""\n\tpublic class dijkstra_table {', 'min_index = target\n        return min_index\n\n    def dijkstra(self, X, m):                  # エクリエマンド雳\n        min_index = X[m]\n        min_dist = float(""inf"")\n        for i in range(1', 'min_index = target\n        return min_index\n\n    def dijkstra_findIndexX(self, matrix): return self.min_distance(matrix, 0)\n    def dijkstra_findIndexY(self, matrix): return self.max_distance(matrix, 0)\n    def dijkstra', 'min_index = target\n        return min_index\n\n    def dijkstra(self, node1, node2, start_id, end_id, weight=None):\n        ""dijkstra between first_id and later_id""\n        if weight == None:                          weight = [1]\n        if start', 'min_index = target\n        return min_index\n\n    def dijkstra(self, i, j):\n        if self.edge_pair((i, j), (i+1, j+1)):\n            return (i, j)\n        else:\n            return None\n\n    def edgify_graph(self', 'min_index = target\n        return min_index\n\n    def dijkstra(self,s,v,d_min,d_max):         #dijkstra.py\n        # returns the distance of the two sets of (s,v)>\n        # d_min and d_max are the min and']","min_index = target
+        return min_index
+
+    def dijkstra_step1(self,a,b):
+        # Start the optimization.
+        f, self.graph = a+b,b
+        # Then try to find a good index.
+        min_index = self.find_good_index",False,195,False,False,1.5154362378015247
+"class Kosaraju:
+    def dfs(self, i, V, adj, visited, stk):
+        visited[i] = 1
+
+        for x in adj[i]:
+            if visited[x] == -1:
+                self.dfs(x, V, adj, visited, stk)
+
+        stk.append(i)
+
+    def kosaraju(self, V, adj):
+
+        stk, visited = [], [-1]*(V+1)
+
+        for i in range(V):
+            if visited[i] == -1:
+                self.dfs(i, V, adj, visited, stk)
+
+        stk.reverse()
+        res = stk.copy()
+
+        ans, visited1 = 0, [-1]*(V+1)
+
+        adj1 = [[] for x in range(V)]
+
+        for i in range(len(adj)):
+            for x in adj[i]:
+                adj1[x].append(i)
+
+        for i in range(len(res)):
+            if visited1[res[i]] == -1:
+                ans += 1
+                self.dfs(res[i], V, adj1, visited1, stk)
+
+        return ans
+
+
+def main():
+    V, E = map(int, input().split())",    adj = [[] for x in range(V)],"
+    for i in range(E):
+        u, v = map(int, input().split())
+        adj[u].append(v)
+
+    print(Kosaraju().kosaraju(V, adj))
+
+
+if __name__ == '__main__':
+    main()
+","['', '', '', '', '', '', '', '', '', '']",,False,32,True,False,0.0
+"def bucket_sort(arr):
+    num_buckets = len(arr)
+    buckets = [[] for bucket in range(num_buckets)]
+    for value in arr:
+        index = value * num_buckets // (max(arr) + 1)
+        buckets[index].append(value)
+    sorted_list = []
+    for i in range(num_buckets):
+        sorted_list.extend(next_sort(buckets[i]))
+    return sorted_list
+
+def next_sort(arr):
+    for i in range(1, len(arr)):
+        j = i - 1
+        key = arr[i]
+        while arr[j] > key and j >= 0:
+            arr[j+1] = arr[j]
+            j = j - 1",        arr[j + 1] = key,"    return arr
+","[':\n                key -= 1\n                if arr[i - 1] > arr[j-', 'length\n        for v in arr[j + 1:end]:\n            key = v % ((begin + v.count', 'ed\n\n\n\n# -*- coding: utf-8 -*-\n# Part of Odoo. See LICENSE file for full copyright', 'x = index - 1\n            rank_b_index = index - 1\n            if index', 'eapq.heappush(self.heap_sort, (key, hashes[0]))\n            self.heap', 'break\n            j += 1\n            key.append(int(value & 0x1000000))\n        sorted_list[i].sort', ""0\n        arr[i] = value\n\n    if arr[0] == '"", 'ckets[i].sort(key - 1)\n            else:\n                arr[j][', ""for y in next_sort(key):\n                if not (y == '"", 'for j in range(len(buckets)):\n            bucket_value = next_sort(']",":
+                key -= 1
+                if arr[i - 1] > arr[j-",False,47,False,False,7.655122720591221
+"def is_balanced(root):
+    return __is_balanced_recursive(root)
+
+
+def __is_balanced_recursive(root):
+    return -1 != __get_depth(root)
+
+
+def __get_depth(root):",    if root is None:,"        return 0
+    left = __get_depth(root.left)
+    right = __get_depth(root.right)
+    if abs(left-right) > 1 or -1 in [left, right]:
+        return -1
+    return 1 + max(left, right)","['', '', '', '', '', '', '', '', '', '']",,False,20,True,False,0.0
+"def quick_sort(arr, simulation=False):
+    iteration = 0
+    if simulation:","        print(""iteration"",iteration,"":"",*arr)","    arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)
+    return arr
+
+def quick_sort_recur(arr, first, last, iteration, simulation):
+    if first < last:
+        pos = partition(arr, first, last)
+        # Start our two recursive calls
+        if simulation:
+            iteration = iteration + 1
+            print(""iteration"",iteration,"":"",*arr)
+            
+        _, iteration = quick_sort_recur(arr, first, pos - 1, iteration, simulation)
+        _, iteration = quick_sort_recur(arr, pos + 1, last, iteration, simulation)
+
+    return arr, iteration
+
+def partition(arr, first, last):
+    wall = first
+    for pos in range(first, last):
+        if arr[pos] < arr[last]:  # last is the pivot
+            arr[pos], arr[wall] = arr[wall], arr[pos]
+            wall += 1
+    arr[wall], arr[last] = arr[last], arr[wall]
+    return wall
+","['arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos, iteration,partition(arr, pos))\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            print(""len(arr)="",len(arr1))\n        quick_sort_', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, iteration, partition)\n        # Start our sorting\n        if simulation:\n            iteration = 0 + step(iterating, 0)\n    else:\n        pos = partition(arr, last, 0)\n        # Start our sorting\n        if simulation:\n            step', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos, iteration,partition(arr, pos, last) + pos)\n        if simulation:\n            #print(""i"", *iteration)\n            print("""",end=\' \')\n    else:\n        pos = partition(arr, last, pos)\n        #', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos, calculation)\n        # Get the sorted tuple from 2.\n        lst1, lst2 = quick_sort_recur(arr, (first, last), (1, 0), \\\n                                          simulation)\n        \n    else:\n        pos = partition(', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos + 1, simulation)\n        # Next, take care of the rest\n        if simulation:\n            print(""part.quick_sort_recur"", "" "",*arr)\n            \ndef partition(seq, sequenceNumber, maxPartContaining):', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos, iteration, partition(arr, pos, first))\n\n        # Straight forward\n        if simulation:\n            first = partition(arr, pos, first)\n            pos = first + 1 + last*2 - 1\n\n\n    pos = partition(', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, last, len(arr) - 2)\n        partition(arr, first, last).sort()\n        print(""arr:"",*arr)\n        \n        # Stop our recursive calls\n        if simulation:\n            print(""partition count:"", partition_count(arr,', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos, iteration, partition(arr, pos, (len(arr)-2)//2))\n        #print(""partitioning"",(i for i in partitions))\n        # Start our one indirect call if we only had more than one\n        if simulation', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos.__len__(),  len(pos), iteration, arr[pos.index(j)] if j < pos.__len__() else None)\n        # We can\'t do it\n        if simulation:\n            return\n        else:\n            return pos', 'arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)\n    return arr\n\ndef quick_sort_recur(arr, first, last, iteration, simulation):\n    if first < last:\n        pos = partition(arr, first, last)\n        # Start our two recursive calls\n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            \n        _, iteration = quick_sort_recur(arr, first, pos+1, iteration, ret=1)\n\n    return last - first + 1, last, 0\n    \ndef partition(arr, pos, idx=0):\n    """"""Get the partition idx from beginning of arr and determine\n    which combination of']","arr, _ = quick_sort_recur(arr, 0, len(arr) - 1, iteration, simulation)
+    return arr
+
+def quick_sort_recur(arr, first, last, iteration, simulation):
+    if first < last:
+        pos = partition(arr, first, last)
+        # Start our two recursive calls
+        if simulation:
+            iteration = iteration + 1
+            print(""iteration"",iteration,"":"",*arr)
+            
+        _, iteration = quick_sort_recur(arr, first, pos, iteration,partition(arr, pos))
+        if simulation:
+            iteration = iteration + 1
+            print(""iteration"",iteration,"":"",*arr)
+            print(""len(arr)="",len(arr1))
+        quick_sort_",False,591,False,False,8.708008839615717
+"def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
+    
+    merge(left,right,arr)
+    return arr
+
+
+def merge(left, right, merged):
+
+    left_cursor, right_cursor = 0, 0
+    while left_cursor < len(left) and right_cursor < len(right):",        if left[left_cursor] <= right[right_cursor]:,"            merged[left_cursor+right_cursor]=left[left_cursor]
+            left_cursor += 1
+        else:
+            merged[left_cursor + right_cursor] = right[right_cursor]
+            right_cursor += 1
+    for left_cursor in range(left_cursor, len(left)):
+        merged[left_cursor + right_cursor] = left[left_cursor]
+    for right_cursor in range(right_cursor, len(right)):
+        merged[left_cursor + right_cursor] = right[right_cursor]
+","['merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while left_cursor < len(left) and right_cursor < len(right):                merged[right_cursor+left_cursor][left_cursor+left_cursor+1] = left[left_cursor]\n            right_cursor', 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while left_cursor < len(left) and right_cursor < len(right): \n            key=merged[left_cursor][right_cursor]\n            del key.keys()[1:]\n            merged[right_cursor][right_cursor]=', 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while right_cursor < len(merged) and left[right[left_cursor]] < right[merged[left_cursor]]:\n            merged[left_cursor+2*top-left_cursor]=merged[left_cursor+2*', 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while left_cursor< len(left) and right_cursor < len(right):\n               if merged[left_cursor]>=right[left_cursor]:\n                                        merged[left_cursor], merged[right_cursor]=right[right_', ""merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        for right_value in merged[right_cursor]:\n            if right_value!=None:\n                right[right_cursor]=','.join(left_value[left_value.values[0]][:-1])\n\n        for left_value"", 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while left_cursor < len(left) and not right[left_cursor]:\n            mid = left_cursor+left_cursor+1\n            if merged[mid]==right[mid]:\n                self.left=mid\n                self.right=', ""merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while left[right_cursor] == right[left_cursor] and left[left_cursor]!= []:\n            mid+=1\n            merged[mid]=' '*(left_cursor-1)  +''*(right_cursor)"", 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        if left_cursor > right_cursor:\n            merged[right_cursor]=left[right_cursor]\n            right_cursor+=1\n        else:\n            merged[left_cursor-1]=right[right_cursor-1]\n            right', 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        while not merged[right_cursor][left_cursor]:\n            if not merged[right_cursor-1][left_cursor]:\n                merged[right_cursor-1][left_cursor]=left[right_cursor]\n            if not merged', 'merged[left_cursor+right_cursor]=left[left_cursor]\n            left_cursor += 1\n        if left_cursor == len(right):\n            merged[left_cursor]=right[right]\n        else:\n            merged[left_cursor+1]=left[left_cursor]\n            merged[left,left_cursor+1]=right']","merged[left_cursor+right_cursor]=left[left_cursor]
+            left_cursor += 1
+        while left_cursor < len(left) and right_cursor < len(right):                merged[right_cursor+left_cursor][left_cursor+left_cursor+1] = left[left_cursor]
+            right_cursor",False,223,False,False,11.597049660567567
+"def num_trees(n):
+    """"""
+    :type n: int
+    :rtype: int
+    """"""
+    dp = [0] * (n+1)",    dp[0] = 1,"    dp[1] = 1
+    for i in range(2, n+1):
+        for j in range(i+1):
+            dp[i] += dp[i-j] * dp[j-1]
+    return dp[-1]
+","['', '', '', '', '', '', '', '', '', '']",,False,13,True,False,0.0
+"def cycle_sort(arr):
+    len_arr = len(arr)
+    for cur in range(len_arr - 1):
+        item = arr[cur]
+
+        index = cur
+        for i in range(cur + 1, len_arr):
+            if arr[i] < item:
+                index += 1
+
+        if index == cur:
+            continue
+",        while item == arr[index]:,"            index += 1
+        arr[index], item = item, arr[index]
+
+        while index != cur:
+
+            index = cur
+            for i in range(cur + 1, len_arr):
+                if arr[i] < item:
+                    index += 1
+
+            while item == arr[index]:
+                index += 1
+            arr[index], item = item, arr[index]
+    return arr
+","['index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n                    continue\n                else:\n                    index += 1\n            arr[index], item = item, arr[index]\n\n    return arr[:cur] + (None,)*(index,) + arr[cur + 1:]\n\n\ndef test_', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n            arr[index], item = item, arr[index]\n\n        while obj is not None:\n\n            obj = obj.parent_object()\n\n        yield obj\n\n\nclass PixelData:\n    """"""This class contains all the properties of', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n            arr[index] = item = arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index +=', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n                item = arr[i]\n\n        arr[cur + 1], item = item, arr[cur + 1]\n\n        while True:\n            # print(""index"", cur,\' item\', arr[cur + 1])\n            if index!=', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index -= 1\n\n            while index!= -1:\n                index = index\n                if arr[index] < item:\n                    index -= 1\n                if index!= -1:\n                    index = index\n                    # if index >= len(arr)\n                    # then', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n\n            if i + 1 < len_arr:\n                index = cur + 1\n\n            current = arr[index]\n\n        while index!= cur:\n\n            index = cur\n            current = (current + 1) / 2, arr[cur+', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n            if index < len_arr - 1:\n                arr[index+1], index = index + 1, num_of_duplicates = item, item(arr[index])\n\n            item, arr, num_of_duplicates =', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n\n            if index == 0:\n                arr_str = ""0""\n\n            elif index == len_arr - 1:\n                arr_str = ""0""\n\n            else:\n                raise ValueError(""Too many keys to sort out, expected {', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 2\n\n            if index == 0 and arr[index-1] == 0:\n                break\n\n        while 1< index:\n            arr[index], item = item, arr[index]\n\n        while 2< index:\n            index = (index -', 'index += 1\n        arr[index], item = item, arr[index]\n\n        while index!= cur:\n\n            index = cur\n            for i in range(cur + 1, len_arr):\n                if arr[i] < item:\n                    index += 1\n\n            if index == cur + 1:\n                continue\n            \n            arr[index], item = arr[index], arr[index]\n\n    index += 1\n\n    while index!= cur + 1:\n        \n        while True:\n            left = None\n            right =']","index += 1
+        arr[index], item = item, arr[index]
+
+        while index!= cur:
+
+            index = cur
+            for i in range(cur + 1, len_arr):
+                if arr[i] < item:
+                    index += 1
+                    continue
+                else:
+                    index += 1
+            arr[index], item = item, arr[index]
+
+    return arr[:cur] + (None,)*(index,) + arr[cur + 1:]
+
+
+def test_",False,384,False,False,2.987838125831893
+"def binary_tree_paths(root):
+    res = []
+    if root is None:
+        return res
+    dfs(res, root, str(root.val))
+    return res
+
+
+def dfs(res, root, cur):
+    if root.left is None and root.right is None:
+        res.append(cur)
+    if root.left:","        dfs(res, root.left, cur+'->'+str(root.left.val))","    if root.right:
+        dfs(res, root.right, cur+'->'+str(root.right.val))
+","['', '', '', '', '', '', '', '', '', '']",,False,56,True,False,0.0
+"GRAY, BLACK = 0, 1
+
+def top_sort_recursive(graph):
+    order, enter, state = [], set(graph), {}
+    
+    def dfs(node):
+        state[node] = GRAY
+        #print(node)
+        for k in graph.get(node, ()):
+            sk = state.get(k, None)
+            if sk == GRAY:
+                raise ValueError(""cycle"")
+            if sk == BLACK:
+                continue
+            enter.discard(k)
+            dfs(k)
+        order.append(node)
+        state[node] = BLACK
+        
+    while enter: dfs(enter.pop())
+    return order
+
+def top_sort(graph):
+    order, enter, state = [], set(graph), {}",    ,"    def is_ready(node):
+        lst = graph.get(node, ())
+        if len(lst) == 0:
+            return True
+        for k in lst:
+            sk = state.get(k, None)
+            if sk == GRAY: 
+                raise ValueError(""cycle"")
+            if sk != BLACK:
+                return False
+        return True
+        
+    while enter:
+        node = enter.pop()
+        stack = []
+        while True:
+            state[node] = GRAY
+            stack.append(node)
+            for k in graph.get(node, ()):
+                sk = state.get(k, None)
+                if sk == GRAY: 
+                    raise ValueError(""cycle"")
+                if sk == BLACK: 
+                    continue
+                enter.discard(k)
+                stack.append(k)
+            while stack and is_ready(stack[-1]):
+                node = stack.pop()
+                order.append(node)
+                state[node] = BLACK
+            if len(stack) == 0:
+                break
+            node = stack.pop()
+        
+    return order
+","['= nop(enter)\n        if curr in dfs:\n            order[n]*=dfa(curr)\n            enter =', 'r[-1]+enter):]\n        except KeyError:\n            state = dfs(order[-1])\n\n        if not node:', 'dfs(node):\n        state = dict.fromkeys([node], dfs(node)))', 'ata\n            enter.append(node)\n\ndef update_dict_recursive(graph, node', 'ter.append(node)\n               dfs(node)[n] = state[node]\n               order.append(node', '(state)\n            #print(enter)\n            #print(nk)\n            # dfs(nk) uses already popped', '(""break"")\n            #print(ex(enter[0]))\n            #print(""<<<<<<<<"")', '#     enter.pop(n)\n        #     dfs(n)\n        #', 'dfs(node[i]) / float(node[i].get(1), len(node', 'rsive(target_node):\n                break\n            if not top_sort_recursive(target_node):\n                break\n            if']","= nop(enter)
+        if curr in dfs:
+            order[n]*=dfa(curr)
+            enter =",False,84,False,False,0.0
+"import unittest
+from bst import Node
+from bst import bst
+
+def height(root):
+    if root is None:",        return 0,"    else:
+        return 1 + max(height(root.left), height(root.right))
+
+
+class TestSuite(unittest.TestCase):
+    def setUp(self):
+        self.tree = bst()
+        self.tree.insert(9)
+        self.tree.insert(6)
+        self.tree.insert(12)
+        self.tree.insert(3)
+        self.tree.insert(8)
+        self.tree.insert(10)
+        self.tree.insert(15)
+        self.tree.insert(7)
+        self.tree.insert(18)
+
+    def test_height(self):
+        self.assertEqual(4, height(self.tree.root))
+
+","['else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(2)\n        self.tree.insert(10)\n        self.tree.insert(10)\n        self.t = TestSuite()\n\n    def test_insert(self):\n        self.assertEqual(self.t.', ""else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(10, '3')\n        self.tree.insert(10, '8', '4')\n        self.tree.insert(5, '6', '2')\n        self.tree.insert(13,"", ""else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(11)\n        self.tree.insert(7)\n        self.tree.insert(8)\n\n    def assert_equal(self, value, tree, node_name):\n        # Python 3 can't compare sets"", 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(30, max([1]*9)))\n\n    def test_suite(self):\n        self.assertEqual(self.tree.maxDepth, 9)\n\n    def test_maxdepth(self):\n        self.assertEqual(', 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(9, height(self.tree))\n\n    def testInit(self):\n        self.assertEqual(1, TestSuite.root.', 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(11)\n\n    def test_node(self):\n        self.assertEqual(height(self.tree.root), 3)\n\n    def test_contains_nothing(self):\n        self.assertEqual(height.search(', 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(11)\n        self.tree.insert(6)\n        self.tree.insert(12.5)\n\n    def test_count(self):\n        self.add_test_data()\n        self.assertEqual(', 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(11)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        \n    #\n    # BaseSuite\n    #\n    def test_findNode(', 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(3)\n        self.tree.insert(12)\n        self.tree.delete(3)\n\n    def test_size(self):\n        self.assertEqual(4, len(self.tree))\n        self.', 'else:\n        return 1 + max(height(root.left), height(root.right))\n\n\nclass TestSuite(unittest.TestCase):\n    def setUp(self):\n        self.tree = bst()\n        self.tree.insert(9)\n        self.tree.insert(6)\n        self.tree.insert(12)\n        self.tree.insert(3)\n        self.tree.insert(8)\n        self.tree.insert(10)\n        self.tree.insert(11)\n        self.tree.insert(12, height=1))\n        self.tree.insert(1, 2)\n        self.tree.insert(1, 9)\n        self.tree.insert(']","else:
+        return 1 + max(height(root.left), height(root.right))
+
+
+class TestSuite(unittest.TestCase):
+    def setUp(self):
+        self.tree = bst()
+        self.tree.insert(9)
+        self.tree.insert(6)
+        self.tree.insert(12)
+        self.tree.insert(3)
+        self.tree.insert(8)
+        self.tree.insert(10)
+        self.tree.insert(2)
+        self.tree.insert(10)
+        self.tree.insert(10)
+        self.t = TestSuite()
+
+    def test_insert(self):
+        self.assertEqual(self.t.",False,482,False,False,0.26093389428531627
+"from __future__ import print_function
+
+
+def tree_print(tree):",    for key in tree:,"        print(key, end=' ')
+        tree_element = tree[key] 
+        for subElem in tree_element:
+            print("" -> "", subElem, end=' ')
+            if type(subElem) != str:
+                print(""\n "")
+        print()
+","['print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\n# This file is part of FNP-Red.\n# Copyright (C) 2013-16  Ryan Koterro\n\n# FNP-Red is free software: you can redistribute it and/or modify it under', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\nclass Solution(object):\n    def buildDictionary(self,nums):\n        pre_list=[]\n        post_list = []\n        for num in nums:\n            if type(num)!= str:\n                print(key,num, end=\'', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\ntest_tree_parse()\n\ndef tree_getchildren(tree):\n        ret = []\n        for subElem in tree[tree_element]:\n                ret.extend(getchildren(subElem))\n        return ret\n\n# T', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\nif __name__ == ""__main__"":     \n    tree_list = []\n    root = []\n    for i in range(1,10): \n        tree_list.extend(tree_list_for_index(i))\n    for node', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\nclass Sonarr(object):\n    def __init__(self): \n        tree = collections.defaultdict(list)\n        for i in range(100): self.insert_key(str(i))\n        root = self.parse(str', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\ndef tree_write_word(word, tree):\n                if word == ""true_root"":\n                        for new_root in tree_true_roots(tree):\n                                        new_root.write_string(str(tree))', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\nfrom collections import defaultdict, OrderedDict\n\nclass Tree:\n    def __init__(self):\n        self.__dict = defaultdict(OrderedDict)\n        self.__dict[\'left\'] = self.__dict[\',\']\n        self.__dict[\'val\'] =', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n\ndef tree_print_depth_first(tree, depth=0):\n        for subElem in tree_element:\n                print(""Depth first ==> "", subElem.depth, end=\' \')\n                if subElem!= end:\n                        print(', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\n#     print(key, p)\n        tree_element = p.findall(""string(//name)#""+key+""//value#""+end)\n\n# -*- cpy-indent-level: 4; indent-tabs-mode:', 'print(key, end=\' \')\n        tree_element = tree[key] \n        for subElem in tree_element:\n            print("" -> "", subElem, end=\' \')\n            if type(subElem)!= str:\n                print(""\\n "")\n        print()\ninorder_tree = \'\'\'\n\n    [\n        {""name"":""Auswertung""},\n        {""name"":""Florestis Wonder""},\n        {""name"":""Stellenowa""},\n        {""name"":""Arbeitsin\'s W']","print(key, end=' ')
+        tree_element = tree[key] 
+        for subElem in tree_element:
+            print("" -> "", subElem, end=' ')
+            if type(subElem)!= str:
+                print(""\n "")
+        print()
+
+# This file is part of FNP-Red.
+# Copyright (C) 2013-16  Ryan Koterro
+
+# FNP-Red is free software: you can redistribute it and/or modify it under",False,343,False,False,0.9935297114617054
+"def is_symmetric(root):
+    if root is None:
+        return True
+    return helper(root.left, root.right)
+
+
+def helper(p, q):
+    if p is None and q is None:
+        return True
+    if p is not None or q is not None or q.val != p.val:
+        return False
+    return helper(p.left, q.right) and helper(p.right, q.left)
+
+
+def is_symmetric_iterative(root):",    if root is None:,"        return True
+    stack = [[root.left, root.right]]
+    while stack:
+        left, right = stack.pop()
+        if left is None and right is None:
+            continue
+        if left is None or right is None:
+            return False
+        if left.val == right.val:
+            stack.append([left.left, right.right])
+            stack.append([left.right, right.left])
+        else:
+            return False
+    return True
+","['return True\n    stack = [[root.left, root.right]]\n    while stack:\n        cur, cur_size = stack.pop()\n        if cur_size <= root.size:                                        ### if current height is less than requested height...\n            for key in xrange(root.size, cur.height):                               ## look', ""return True\n    stack = [[root.left, root.right]]\n    while stack:\n        x, y = stack.pop()\n        if (y + 1 == 0) == 1:            print 'here'\n            return False\n        x_max, y_max_i = x + 1, y + 1\n        for i"", 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        x, y = stack.pop()\n        if (x.val > root.val): return False\n        if (y.val > root.val): return False\n        if (x.val < root.val):    stack.append', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        top, right = stack.pop()\n        if left.right!= right.right:\n            # Increment the top-most stack item\n            top.next()\n            right.next()\n        elif not top.right:\n            # Start on', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        v0, v1 = stack.pop()\n        if v1 == v0:\n            continue\n        stack.append([root, v0, v1])\n        root = v0\n    return False\n\n\ndef is_sane_', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        current = stack[-1][-1]\n        if current == root.value:\n            return True\n        if current == root.left:\n            stack[-1][-1].next = current\n            return True\n        if current == root.right:', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        p = stack.pop()\n        if is_double_in_stack( p ):\n            continue\n        pstack = StackStack(stack)\n        if is_double_in_pstack(pstack):\n            continue\n        if is_', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        current, nxt = stack.pop()\n        if current.left!= root.right:            \n            continue\n        s = set([(root.left,current.val)])\n        if current.right not in s:                       \n            stack.append', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        node, val = stack.pop()\n        if node == root.right:\n            return True\n        if val <= node.val:          # swap nodes\n            while node.left and not node.right:\n                node.left = node.', 'return True\n    stack = [[root.left, root.right]]\n    while stack:\n        root, path = stack.pop()\n        for neighbour in root.neighbours():\n            if neighbour.visited == path.left or neighbour.visited == path.right:\n                continue\n            neighbour_']","return True
+    stack = [[root.left, root.right]]
+    while stack:
+        cur, cur_size = stack.pop()
+        if cur_size <= root.size:                                        ### if current height is less than requested height...
+            for key in xrange(root.size, cur.height):                               ## look",False,303,False,False,0.7300242601021385
+"import random
+
+def __choose_state(state_map):
+    choice = random.random()
+    probability_reached = 0
+    for state, probability in state_map.items():
+        probability_reached += probability
+        if probability_reached > choice:
+            return state
+    return None
+
+def next_state(chain, current_state):
+    next_state_map = chain.get(current_state)
+    return __choose_state(next_state_map)
+","def iterating_markov_chain(chain, state):","    while True:
+        state = next_state(chain, state)
+        yield state
+","['', '', '', '', '', '', '', '', '', '']",,False,41,True,False,0.0
+"def dfs_traverse(graph, start):
+    visited, stack = set(), [start]
+    while stack:
+        node = stack.pop()
+        if node not in visited:
+            visited.add(node)
+            for next_node in graph[node]:
+                if next_node not in visited:
+                    stack.append(next_node)
+    return visited
+
+def bfs_traverse(graph, start):
+    visited, queue = set(), [start]
+    while queue:
+        node = queue.pop(0)
+        if node not in visited:
+            visited.add(node)
+            for next_node in graph[node]:
+                if next_node not in visited:
+                    queue.append(next_node)
+    return visited
+
+def dfs_traverse_recursive(graph, start, visited=None):
+    if visited is None:",        visited = set(),"    visited.add(start)
+    for next_node in graph[start]:
+        if next_node not in visited:
+            dfs_traverse_recursive(graph, next_node, visited)
+    return visited
+","['', '', '', 'next_queue = self', '', '', '', '', '', '']",,False,23,True,False,0.0
+"def find_path(graph, start, end, path=[]):
+    path = path + [start]
+    if start == end:
+        return path
+    if not start in graph:
+        return None
+    for node in graph[start]:
+        if node not in path:
+            newpath = find_path(graph, node, end, path)
+            return newpath
+    return None
+
+def find_all_path(graph, start, end, path=[]):
+    path = path + [start]
+    if start == end:
+        return [path]",    if not start in graph:,"        return []
+    paths = []
+    for node in graph[start]:
+        if node not in path:
+            newpaths = find_all_path(graph, node, end, path)
+            for newpath in newpaths:
+                paths.append(newpath)
+    return paths
+
+def find_shortest_path(graph, start, end, path=[]):
+    path = path + [start]
+    if start == end:
+        return path
+    if start not in graph:
+        return None
+    shortest = None
+    for node in graph[start]:
+        if node not in path:
+            newpath = find_shortest_path(graph, node, end, path)
+            if newpath:
+                if not shortest or len(newpath) < len(shortest):
+                    shortest = newpath
+    return shortest
+","['return []\n    paths = []\n    for node in graph[start]:\n        p, paths = find_path(node, paths)\n\n    # for c in xrange(len(paths)):\n    #     if c == len(paths)-1 and paths[c+1] == None:\n    #         paths[', 'return []\n    paths = []\n    for node in graph[start]:\n        for path in path:\n            paths.append(node + list(set(recursive_replace(path))) +\n                        recursive_replace(path))\n    paths = backtrack_set(paths)\n\n    return paths\n    def print_path(', 'return []\n    paths = []\n    for node in graph[start]:\n        paths = paths + find_path(node, end, [list])\n    if not paths:\n        return []\n    return paths\n\n#   Copyright 2014 Daniel Pearson (daniel.pearson@gmail.com)', 'return []\n    paths = []\n    for node in graph[start]: # iterate over path to find all reachable nodes\n        if 0 <= node:\n            paths = [path + [i] for i in range(1, node + 1)]\n        else:\n            paths = [path + [i] for i in', 'return []\n    paths = []\n    for node in graph[start]:\n        newpaths = []\n        paths.append(node.label_)\n        for path in node.out._data:\n            newpaths.extend(list(path))\n        paths.append(newpaths)\n        if path in paths:\n            child', 'return []\n    paths = []\n    for node in graph[start]:\n        for path in path:\n            paths.append(path)\n            pathsc = find_path_comb(graph, node, path)\n            pathsc2 = [ path for path in pathsc if path!=node and find_path(', 'return []\n    paths = []\n    for node in graph[start]:\n        path = paths + find_path(graph, start, node)\n    for node in graph[end]:\n        paths = [path] + path\n    result = []\n    for path in paths:\n        result += find_path(graph,', 'return []\n    paths = []\n    for node in graph[start]:\n        if node not in paths:\n            paths.append(node)\n    for path in paths:\n        for node in path:\n            if node not in nodes_all:\n                paths_all.append(node)\n                data = [x for', 'return []\n    paths = []\n    for node in graph[start]: \n        if node!= end:     \n            paths = paths + [ node + [end] ]\n       \n    def __recurse(node):\n        return []\n    __recurse(paths[0])\n    def __recurse(paths, current=[]):\n        if len', 'return []\n    paths = []\n    for node in graph[start]:\n        newpaths = find_all_paths(node, paths)\n        paths = newpaths + paths\n    for subpath in subpaths:\n        newpaths = path + subpath\n        if not any(path in d for d in paths):\n            del']","return []
+    paths = []
+    for node in graph[start]:
+        p, paths = find_path(node, paths)
+
+    # for c in xrange(len(paths)):
+    #     if c == len(paths)-1 and paths[c+1] == None:
+    #         paths[",False,185,False,False,1.4459946071271377
+"def predecessor(root, node):
+    pred = None
+    while root:",        if node.val > root.val:,"            pred = root
+            root = root.right
+        else:
+            root = root.left
+    return pred
+","['', '', '', '', '', '', '', '', '', '']",,False,31,True,False,0.0
+"import unittest
+from bst import Node
+from bst import bst
+
+def num_empty(root):
+    if root is None:
+        return 1
+    elif root.left is None and root.right:
+        return 1 + num_empty(root.right)
+    elif root.right is None and root.left:
+        return 1 + num_empty(root.left)
+    else:
+        return num_empty(root.left) + num_empty(root.right)
+
+
+class TestSuite(unittest.TestCase):
+    def setUp(self):
+        self.tree = bst()
+        self.tree.insert(9)
+        self.tree.insert(6)
+        self.tree.insert(12)",        self.tree.insert(3),"        self.tree.insert(8)
+        self.tree.insert(10)
+        self.tree.insert(15)
+        self.tree.insert(7)
+        self.tree.insert(18)
+
+    def test_num_empty(self):
+        self.assertEqual(10, num_empty(self.tree.root))
+
+if __name__ == '__main__':
+    unittest.main()
+","['f.root.right = num_empty(self.root)\n        self.s_array = Array(self.root, num_', 'tree.addNode(self.graph)\n        self.tree.addNode(self.tree.getName())\n        self.graph.addEdge', 'global_num = global_num + 1\n            global_num = global_num + 2\n\n        root.left = global_num -', 'self.right = Node(label=""right"")\n        self.height = Node(label=""height"")\n        self.left_child = Node', 'ot_from_node(self.root)\n        self.init_node(self.count)\n\n    def test_num_empty_b', ""'T']\n        self.count = 40\n        self.list_node_types = [str, tuple]\n        self."", 'odes()\n        print \'Number of edges:\', self.tree.countEdges()\n        self.bst = Node.Create(""testRoot"")', 'mpty1.put(""one"")\n        self.num1 = num_empty(self.root)\n        self.one1 = bst', 'self.root = Node.fromObj(None)\n        #print self.root, self.root.val\n        with self.assertRaises(KeyError):', 'self.post_label = None\n        self.size = 8\n        self.pre_node = None\n        self.pre_node_label = None']","f.root.right = num_empty(self.root)
+        self.s_array = Array(self.root, num_",False,62,False,False,3.3582360261774302
+"import heapq
+
+def prims_minimum_spanning(graph_used):
+    vis=[]","    heap=[[0,1]]","    prim = set()
+    mincost=0
+
+    while len(heap) > 0:
+        cost, node = heapq.heappop(heap)
+        if node in vis:
+            continue
+
+        mincost += cost
+        prim.add(node)
+        vis.append(node)
+
+        for distance, adjacent in graph_used[node]:
+            if adjacent not in vis:
+                heapq.heappush(heap, [distance, adjacent])
+
+    return mincost
+","['', '', '', '', '', '', '', '', '', '']",,False,16,True,False,0.0
+"def pancake_sort(arr):
+    len_arr = len(arr)
+    if len_arr <= 1:
+        return arr","    for cur in range(len(arr), 1, -1):","        index_max = arr.index(max(arr[0:cur]))
+        if index_max+1 != cur:
+            if index_max != 0:
+                arr[:index_max+1] = reversed(arr[:index_max+1])
+            arr[:cur] = reversed(arr[:cur])
+    return arr
+","['index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\ndef max_list_len(list):\n    len_res1 = math.sqrt((list[0:len_arr1])**2 + (list[len_arr1:]**2) + (list[len_arr1', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\nfrom django.core       import serializers\nfrom django.db.models     import Q\nfrom django.db.models.expressions import Geom, From\n\n\nclass Introspector(object):\n    """"""\n    Class for generating the data.', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\nfrom time import sleep\nimport datetime\nfrom django.http import HttpResponse\nfrom django.shortcuts import render_to_response, HttpResponseRedirect\nfrom django.shortcuts import render_to_response\n\nfrom django_tables2 import RequestConfig', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\ndef check_length(node, left, right):\n    return left>right or node.is_end_node and node.length > 2**31-len(left) or node.is_left_node and left[0', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\n################################################################################\n# Copyright(C) 2016 Pierre Cavares\n################################################################################\n\n\ndef main(session):    \n    global index_max; index_max = len(index_max)\n    \n    # Load the index\n    index = get_', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\ndef get_max_val():\n    return get_max(arr[(cur + 1):index_max+1])\n\ndef get_min(d):\n    return d[:cur]\n\n# Create the indexers\nindex', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\ndef main():\n\n\tprint ""Starting test...""\n        index = []\n\tfor x in range(6):\n\t    index.append(index_max(str(x)))\n\tprint ""Finished test!""\n\n\t\n\tfor x in', 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\n# This file describes a BED file (or one for a single user).\n# It lists the beds in the BED file. The order of beds in the file\n# in the user list determines the order in which the', ""index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n\n# DPAB: This is probably wrong as the last element of the list is a digit.\n#         It is not exactly as long as '0x' is a digit, but probably means there have to be a leading zero."", 'index_max = arr.index(max(arr[0:cur]))\n        if index_max+1!= cur:\n            if index_max!= 0:\n                arr[:index_max+1] = reversed(arr[:index_max+1])\n            arr[:cur] = reversed(arr[:cur])\n    return arr\n""""""Testing interface for the various HTTP request types.""""""\r\n\r\nimport unittest\r\nfrom test import test_support\r\nimport cgi\r\n\r\nclass RequestTest(unittest.TestCase):\r\n\r\n    def _encode_data(self, data, content_']","index_max = arr.index(max(arr[0:cur]))
+        if index_max+1!= cur:
+            if index_max!= 0:
+                arr[:index_max+1] = reversed(arr[:index_max+1])
+            arr[:cur] = reversed(arr[:cur])
+    return arr
+def max_list_len(list):
+    len_res1 = math.sqrt((list[0:len_arr1])**2 + (list[len_arr1:]**2) + (list[len_arr1",False,302,False,False,1.0975372885787202
+"class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+
+def array_to_bst(nums):
+    if not nums:
+        return None
+    mid = len(nums)//2
+    node = TreeNode(nums[mid])
+    node.left = array_to_bst(nums[:mid])",    node.right = array_to_bst(nums[mid+1:]),"    return node
+","['', '', '', '', '', '', '', '', '', '']",,False,43,True,False,0.0
+"class Graph:
+    def __init__(self, vertices):
+        # No. of vertices
+        self.vertex_count = vertices
+
+        # default dictionary to store graph
+        self.graph = {}
+
+        # To store transitive closure
+        self.closure = [[0 for j in range(vertices)] for i in range(vertices)]
+
+    def add_edge(self, source, target):
+        if source in self.graph:
+            self.graph[source].append(target)
+        else:
+            self.graph[source] = [target]
+
+    def dfs_util(self, source, target):
+        # Mark reachability from source to target as true.
+        self.closure[source][target] = 1
+
+        # Find all the vertices reachable through target
+        for adjacent in self.graph[target]:
+            if self.closure[source][adjacent] == 0:
+                self.dfs_util(source, adjacent)
+
+    def transitive_closure(self):
+        # Call the recursive helper function to print DFS
+        # traversal starting from all vertices one by one
+        for i in range(self.vertex_count):","            self.dfs_util(i, i)","
+        return self.closure
+","['', '', '', '', '', '', '', '', '', '']",,False,31,True,False,0.0
+"def insertion_sort(arr, simulation=False):
+    iteration = 0
+    if simulation:
+        print(""iteration"",iteration,"":"",*arr)",        ,"    for i in range(len(arr)):
+        cursor = arr[i]
+        pos = i
+        
+        while pos > 0 and arr[pos - 1] > cursor:
+            arr[pos] = arr[pos - 1]
+            pos = pos - 1
+        arr[pos] = cursor
+        
+        if simulation:
+                iteration = iteration + 1
+                print(""iteration"",iteration,"":"",*arr)
+
+    return arr
+","['', '', '', '', '', '', '', '', '', '']",,True,8,True,True,0.0
+"def gnome_sort(arr):
+    n = len(arr)
+    index = 0
+    while index < n:
+        if index == 0 or arr[index] >= arr[index-1]:
+            index = index + 1
+        else:
+            arr[index], arr[index-1] = arr[index-1], arr[index]",            index = index - 1,"    return arr
+","['', '', '', '', '', '', '', '', '', '']",,False,29,True,False,0.0
+"def bubble_sort(arr, simulation=False):
+    def swap(i, j):
+        arr[i], arr[j] = arr[j], arr[i]
+
+    n = len(arr)
+    swapped = True
+    
+    iteration = 0
+    if simulation:
+        print(""iteration"",iteration,"":"",*arr)
+    x = -1
+    while swapped:
+        swapped = False
+        x = x + 1
+        for i in range(1, n-x):
+            if arr[i - 1] > arr[i]:
+                swap(i - 1, i)
+                swapped = True
+                if simulation:
+                    iteration = iteration + 1","                    print(""iteration"",iteration,"":"",*arr)","                    
+    return arr
+","['swap(i-x-1,i)\n\n    return arr[0]\nfrom django.core.management.base import BaseCommand, CommandError', 'break\n            if i and i % x == 0:\n                swap(i+1, n-x)\n                x = -1\n                break\n        else:', 'bubble"")\n            else:\n                swap(iteration, i)\n            iteration = iteration + 1\n    \n    print(""yapf: {0:6.2f}"".format(n', 'rted array:"")\n    for i in range(2, n-3):\n        swap(1, i)\n    \n\nprint(""Let\'s', 'print(""simulating with"",simuland,arr[i-x],"":"",*arr)\n                    x = copy.copy(arr[i-neg', 'else:\n                    bubble_sort(arr, simulation=True)\n                    if len(data) < (1+n/10):\n                        data = swap(data, x) + x*[', 'print(arr[n-x-i-1:i])\n            elif simulation and \\\n                  i == n-x-1 or (i == x', 'break\n    \n    print(""x"",n,"":"",x+1,"":"",*simulation_start_end)\n\ndef print_all():\n    print(""Bubble sort"")\n    for i in', 'bubble_sort(arr,bubble_count=bubble_count+1,\n                        bubbles=bubbles, simulation=False)\n        if x >=', 'wap(i, j)\n    return 0\n\nif __name__==""__main__"":\n    #TODO: Add new test.\n    test_bubble_']","swap(i-x-1,i)
+
+    return arr[0]
+from django.core.management.base import BaseCommand, CommandError",False,79,False,False,2.4623373672221804
+"def first_occurrence(array, query):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = low + (high-low)//2
+        if low == high:
+            break
+        if array[mid] < query:",            low = mid + 1,"        else:
+            high = mid
+    if array[low] == query:
+        return low
+","['', '', '', '', '', '', '', '', '', '']",,False,25,True,False,0.0
+"from tree import TreeNode
+
+
+def max_height(root):
+    if root is None:
+        return 0
+    height = 0
+    queue = [root]
+    while queue:",        height += 1,"        level = []
+        while queue:
+            node = queue.pop(0)
+            if node.left is not None:
+                level.append(node.left)
+            if node.right is not None:
+                level.append(node.right)
+        queue = level
+    return height
+
+
+def print_tree(root):
+    if root is not None:
+        print(root.val)
+        print_tree(root.left)
+        print_tree(root.right)
+","['level = []\n        while queue:\n            node = queue.pop(0)\n            if node.left is not None:\n                level.append(node.left)\n            if node.right is not None:\n                level.append(node.right)\n        queue = level\n    return height\n\n\ndef print_tree(root):\n    if root is not None:\n        print(root.val)\n        print_tree(root.left)\n        print(root.right)\n    else:\n        print(0)\n\n\ndef print_level():\n    return [node.val for node in level if node.val]\n\n\ndef print_height(node):\n    height', '', 'level = []\n        while queue:\n            node = queue.pop(0)\n            if node.left is not None:\n                level.append(node.left)\n            if node.right is not None:\n                level.append(node.right)\n        queue = level\n    return height\n\n\ndef print_tree(root):\n    if root is not None:\n        print(root.val)\n        print_tree(root.left)\n        print(root.right.val)\n\n\nclass Solution(object):\n    def levelOrder(self, root):\n        """"""\n        :type root: TreeNode\n        :rtype: List[List[int]]\n        """"""\n        left', '', '', '', '', '', '', '']","level = []
+        while queue:
+            node = queue.pop(0)
+            if node.left is not None:
+                level.append(node.left)
+            if node.right is not None:
+                level.append(node.right)
+        queue = level
+    return height
+
+
+def print_tree(root):
+    if root is not None:
+        print(root.val)
+        print_tree(root.left)
+        print(root.right)
+    else:
+        print(0)
+
+
+def print_level():
+    return [node.val for node in level if node.val]
+
+
+def print_height(node):
+    height",False,510,False,False,0.3489346944294959
+"def stoogesort(arr, l, h): 
+    if l >= h: 
+        return
+   
+    if arr[l]>arr[h]: 
+        t = arr[l] 
+        arr[l] = arr[h] 
+        arr[h] = t 
+   
+    if h-l + 1 > 2: 
+        t = (int)((h-l + 1)/3) 
+        stoogesort(arr, l, (h-t)) 
+        stoogesort(arr, l + t, (h)) 
+        stoogesort(arr, l, (h-t)) 
+        
+
+if __name__ == ""__main__"":","    array = [1,3,64,5,7,8]","    n = len(array) 
+    stoogesort(array, 0, n-1) 
+    for i in range(0, n): 
+        print(array[i], end = ' ') 
+","[""if os.path.isdir(path):\n        a = []\n        while l < len(dir):\n            if dir[l].lower() in ('.', '..'): \n                break\n            a."", 'unittest.main(verbosity=2)import re\nfrom collections import namedtuple\nfrom math import log\nfrom os.path import basename\nfrom os.path import splitext\nimport os', 'st): \n    tmp_list = []\n    for i in src_list: \n        if s_utils.is_int(i): \n            tmp_list.append((i + 1))', 'main()\n# Copyright (C) 2016, Gabriel Bourlet <gabriel.brolet@delaunay.com>\n#\n# This program', 'rom app import app, db\nimport random\nimport time\nimport csv\n\ndef get_all_topics_by_content(collid,content):\n    topic_list = db.session.', ""print('main program')\n    print('--------')\n    print('stooge')\n    print('--------------')\n    print('stooge sort')\n    stoogesort([2, 2,"", 'def stoogeSort(self, arr, sort): \n        if sort[0]<0 or arr[sort[0]-1]>3: \n            return\n\n        # find last value\n        dum = arr', ""@jit\n #def stoogesort_2(arr, l, h): \n    \n    s,t = stoogesort(arr, l, h) \n    print('stooge"", '):\n#     n = len(arr) \n\ndef main():\n    print ""1.1""\n    data_dir = ""results/""\n    dir2_list = os.listdir', '**options):\n    """"""hist(data, bins) -> table\n    hist(data, bins, logarithmic=True) -> array""""""\n    \n    if options.has_key(\'logarith']","if os.path.isdir(path):
+        a = []
+        while l < len(dir):
+            if dir[l].lower() in ('.', '..'): 
+                break
+            a.",False,140,False,False,1.7590773942055664
+"def ternary_search(left, right, key, arr):
+    while right >= left:
+        mid1 = left + (right-left) // 3",        mid2 = right - (right-left) // 3,"
+        if key == arr[mid1]:
+            return mid1
+        if key == mid2:
+            return mid2
+
+        if key < arr[mid1]:
+            # key lies between l and mid1
+            right = mid1 - 1
+        elif key > arr[mid2]:
+            # key lies between mid2 and r
+            left = mid2 + 1
+        else:
+            # key lies between mid1 and mid2
+            left = mid1 + 1
+            right = mid2 - 1
+
+    # key not found
+    return -1
+","['if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid2 - 1\n\n        # if l and r are the same they must have the same size\n        L = (self.hasharray[mid1] ^ self.hasharray[r1] ^\n         self.hasharray[r2]', 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1 - 1\n        right1 = mid1\n        while left1 < mid1:\n            mid2 = (right1+right1)//3\n        mid1 = left1\n        while left2 > mid2:\n            rmid2 = (', 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = rshift\n\n        # key not lies between r and mid1\n        mid1 = (left + mid1)//2\n        mid2 = (left + mid2)//2\n\n        mid3 = (right + mid1) // 2\n        mid4', 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid2 - 1\n        mid1 = left + (right-left) // 3\n        \n    return mid1\n\t\nclass LRUCache(object):\n    """"""\n    LRU - Sort array elements of a list in pre-sorted order with\n    their', 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1 + (right-right) // 3\n    \n        if left == mid1:\n            mid1 = mid2\n        elif left > arr[mid1]:\n            # l < mid1 and r > mid2\n            # mid1 > mid2', 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1\n        # idx of LS_mid1 must be in range(0, 2*num_sites)\n        if l>0:\n            # array idx starts from 0\n            LS_mid1 = find_location_in_', ""if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1 - vowel_dict[mid1]\n            right = mid2 + vowel_dict[mid2]\n\n        mid1 = right + v + 'h'\n        v = v + 'c'\n        while right >= mid1"", 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1 - (right-left)\n\n        # do this the slow way too\n        slow_left = right - left\n\n        slow_array = [0] * (slow_left)\n        slow_table = np.array(slow_array', ""if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1 - 2\n            mid1 = 2\n\n        # if the key ends up and a character that can't be directly followed by\n        # is not in the sentence is a verb\n        if key >= l and'' not in l and arr["", 'if key == arr[mid1]:\n            return mid1\n        if key == mid2:\n            return mid2\n\n        if key < arr[mid1]:\n            # key lies between l and mid1\n            right = mid1 - 1\n        elif key > arr[mid2]:\n            # key lies between mid2 and r\n            left = mid2 + 1\n        else:\n            # key lies between mid1 and mid2\n            left = mid1 - 2\n            right = mid2 + 1\n\n        mid1 = left + (right-left) // 3\n        r1 = middle1 + 2\n        if right <= mid1:\n            return mid1\n        if mid1 >= r1']","if key == arr[mid1]:
+            return mid1
+        if key == mid2:
+            return mid2
+
+        if key < arr[mid1]:
+            # key lies between l and mid1
+            right = mid1 - 1
+        elif key > arr[mid2]:
+            # key lies between mid2 and r
+            left = mid2 + 1
+        else:
+            # key lies between mid1 and mid2
+            left = mid2 - 1
+
+        # if l and r are the same they must have the same size
+        L = (self.hasharray[mid1] ^ self.hasharray[r1] ^
+         self.hasharray[r2]",False,497,False,False,0.48729373579264945
+"def bellman_ford(graph, source):
+    weight = {}
+    pre_node = {}
+
+    initialize_single_source(graph, source, weight, pre_node)
+
+    for _ in range(1, len(graph)):",        for node in graph:,"            for adjacent in graph[node]:
+                if weight[adjacent] > weight[node] + graph[node][adjacent]:
+                    weight[adjacent] = weight[node] + graph[node][adjacent]
+                    pre_node[adjacent] = node
+
+    for node in graph:
+        for adjacent in graph[node]:
+            if weight[adjacent] > weight[node] + graph[node][adjacent]:
+                return False
+
+    return True
+
+def initialize_single_source(graph, source, weight, pre_node):
+    for node in graph:
+        weight[node] = float('inf')
+        pre_node[node] = None
+
+    weight[source] = 0
+","['for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] < distance:      # check if adjacent is far from edge\n                if adjacent in weight and distance - 1 > weight[adjacent]:      # if adjacent node exists in distance\n                    yield adjacent\n                    for neighbor in graph.neighbors(adjacent):', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] > weight[node] + graph[dis adjacent]:\n                    weight[node] = weight[node] + graph[dis adjacent][weight[adjacent]]\n                    graph[dis] = (node, disperated)\n    return graph', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] < weight[node] + graph[pre_node[adjacent]] + \\\n                    graph[adjacent]:\n\n                    if adjacent not in shortest:\n                        shortest[adjacent] = node\n\n                    if adjacent not in shortest:\n\n                        if adjacent in', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] < weight[pre_node[adjacent]] + adjacent:\n                    weight[post_node[adjacent]] = weight[pre_node[adjacent]] + adjacent\n        adj_index = node - 1\n        adj = (str.', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] > weight[node] + adjacent:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    for adjacente in nx.dfs_edges_iter(graph, [adjacent]):\n                        if (', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] > weight[previous] + graph[previous][adjacent]:\n                weight[previous] = weight[previous] + graph[previous][adjacent]\n\n                if adjacent == node:\n                    # If one of the previous or next nodes is the', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] <  weight[pre_node] + adjacent:\n                adjacent = node\n\n    # The following function is specific to the implementation:\n    def bellman_ford(self, a):\n        result = """"\n        curr = a[0]', 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] < weight[pre_node] + adjacent:\n                return -1\n            else:\n                weight[pre_node] = adjacent\n\n\n    print(type(graph[end_node][n])(end_node, n) for end_', ""for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] > weight[node] - 1:#don't count as stated once in one side?\n                adj_node = node + adj\n                s1 = adjacent + 1 \n                s2 = adjacent - 1 \n                s3 = adjacent - graph["", 'for adjacent in graph[node]:\n                if weight[adjacent] > weight[node] + graph[node][adjacent]:\n                    weight[adjacent] = weight[node] + graph[node][adjacent]\n                    pre_node[adjacent] = node\n\n    for node in graph:\n        for adjacent in graph[node]:\n            if weight[adjacent] > weight[node] - graph[node][adjacent]:\n                    pre_node[adjacent] = node\n\n    return pre_node\n\ndef find_adjacent(graph,node):\n    count = 0\n\n    for adjacent in graph']","for adjacent in graph[node]:
+                if weight[adjacent] > weight[node] + graph[node][adjacent]:
+                    weight[adjacent] = weight[node] + graph[node][adjacent]
+                    pre_node[adjacent] = node
+
+    for node in graph:
+        for adjacent in graph[node]:
+            if weight[adjacent] < distance:      # check if adjacent is far from edge
+                if adjacent in weight and distance - 1 > weight[adjacent]:      # if adjacent node exists in distance
+                    yield adjacent
+                    for neighbor in graph.neighbors(adjacent):",False,563,False,False,2.9421461168103615
+"from algorithms.graph.graph import DirectedGraph
+
+
+class Tarjan:
+    def __init__(self, dict_graph):
+        self.graph = DirectedGraph(dict_graph)
+        self.index = 0
+        self.stack = []
+
+        for vertex in self.graph.nodes:
+            vertex.index = None
+
+        self.sccs = []
+        for vertex in self.graph.nodes:
+            if vertex.index is None:
+                self.strongconnect(vertex, self.sccs)
+
+    def strongconnect(self, vertex, sccs):
+        vertex.index = self.index
+        vertex.lowlink = self.index
+        self.index += 1
+        self.stack.append(vertex)
+        vertex.on_stack = True
+
+        for adjacent in self.graph.adjacency_list[vertex]:
+            if adjacent.index is None:
+                self.strongconnect(adjacent, sccs)
+                vertex.lowlink = min(vertex.lowlink, adjacent.lowlink)
+            elif adjacent.on_stack:","                vertex.lowlink = min(vertex.lowlink, adjacent.index)","
+        if vertex.lowlink == vertex.index:
+            scc = []
+            while True:
+                adjacent = self.stack.pop()
+                adjacent.on_stack = False
+                scc.append(adjacent)
+                if adjacent == vertex:
+                    break
+            scc.sort()
+            sccs.append(scc)
+","['', '', '', '', '', '', '', '', '', '']",,False,68,True,False,0.0
+"def find_all_cliques(edges):
+    def expand_clique(candidates, nays):
+        nonlocal compsub
+        if not candidates and not nays:
+            nonlocal solutions
+            solutions.append(compsub.copy())
+        else:
+            for selected in candidates.copy():
+                candidates.remove(selected)
+                candidates_temp = get_connected(selected, candidates)
+                nays_temp = get_connected(selected, nays)
+                compsub.append(selected)
+                expand_clique(candidates_temp, nays_temp)
+                nays.add(compsub.pop())
+
+    def get_connected(vertex, old_set):
+        new_set = set()",        for neighbor in edges[str(vertex)]:,"            if neighbor in old_set:
+                new_set.add(neighbor)
+        return new_set
+
+    compsub = []
+    solutions = []
+    possibles = set(edges.keys())
+    expand_clique(possibles, set())
+    return solutions
+","[""for sol in nays:\n                        solutions_temp.pop(sol)\n                    nays.remove(nay_temp.pop('e'))\n            for nay"", 'nays_temp.n_ = [selected] + [n_temp]\n                nalth[compsub.copy()] = [no_stiche]', 'nays_temp.update_state()\n                    nays = nays_temp.pop_next_line()\n                    expand_clique(', 'mp:\n                    nays.create(solutions_temp[selected], selected))\n                if nays and selected not in nays:\n                    print(selected)\n                    print(', 'l:\n                    robots.append(nay.copy())\n                compsub.append(self.get_best(edges))\n            else:\n                if options.use', 'if len(selected_temp) > len(solutions) - 1:\n                    expanded_temp = solutions[len(solutions) - 1].copy', ""p.copy())\n            for n_temp in nays.copy():\n                n_temp['result'] = sum([c['value'] for c in n_temp"", ""))\n    for edge in edges:\n        if not comp_in_clique(edge.candidates, solution='C'):\n            expand_clique("", 'expanded_clique(nays_temp, selected)\n                selected.add( (selects.index(default_solution),\n                           solution_set.', 'nays.add(nay.copy())\n\n    n = len(solution_sequence)\n    selected_solution = [solution for idx, solution in enumerate']","for sol in nays:
+                        solutions_temp.pop(sol)
+                    nays.remove(nay_temp.pop('e'))
+            for nay",False,114,False,False,1.996819088094332
+"import bisect
+
+def next_greatest_letter(letters, target):
+    index = bisect.bisect(letters, target)
+    return letters[index % len(letters)]
+
+def next_greatest_letter_v1(letters, target):
+    if letters[0] > target:
+        return letters[0]
+    if letters[len(letters) - 1] <= target:
+        return letters[0]
+    left, right = 0, len(letters) - 1
+    while left <= right:",        mid = left + (right - left) // 2,"        if  letters[mid] > target:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return letters[left]
+
+def next_greatest_letter_v2(letters, target):
+    for index in letters:
+        if index > target:
+            return index
+    return letters[0]
+","[""if  letters[mid] > target:\n            right = mid - 1\n        return letters[mid] + letters[left + right]\n\nclass Records_Test(object):\n    'Records test cases'\n    table_name ='records'\n    field_name = 'id'\n    record_fields = '"", 'if  letters[mid] > target:\n            right = mid - 1\n        if letters[left] > target:\n            left = mid\n        #print (left, right)\n        middle = None\n        index = (left + right) / 2\n\n        if letters[index] > target:\n            if letters[index - 1', 'if  letters[mid] > target:\n            right = mid - 1\n        elif  target > letters[left] and target > letters[mid]\n        elif letters[left] <= target and target <= letters[mid - 1] and target < letters[mid + 1] and target > letters[mid + 1]:', 'if  letters[mid] > target:\n            right = mid - 1\n        letter = target\n        left, right = right, left + 1\n    target = letters[mid]\n\nclass Solution:\n    def findFourSum(self, n):\n        """"""\n        :type n: int\n        :rtype: int\n        """"""', 'if  letters[mid] > target:\n            right = mid - 1\n        while left <= target:\n            left = targets[mid - 1] + 1\n        while left <= target:\n            right = right - 1\n        if  letters[max(right-3, left-2):mid - 3] <= target:', 'if  letters[mid] > target:\n            right = mid - 1\n        return other_char(letters, target, right)\n    right = find_next(other_char(letters, mid, target), letters, -1)\n    if not (c == target):               #character is already consumed\n        return None', 'if  letters[mid] > target:\n            right = mid - 1\n        if target < 10:\n            left = max(left - 10, 0), 10 + target\n        if letters[left] < target:\n            left += 1\n        mid -= 1\n        left -= 1\n        mid += 1\n    return ord(letters[', 'if  letters[mid] > target:\n            right = mid - 1\n        return right\n\n\nimport math\nfrom collections import namedtuple\nfrom decimal import Decimal\n\nfrom PyQt4.QtCore import *\nfrom PyQt4.QtGui import *\n\nclass QRCodeWidget(QWidget):\n    def __init__(self,', 'if  letters[mid] > target:\n            right = mid - 1\n        return letters[mid - 1] + letters[left] + str(target)\n#!/usr/bin/env python\n# Copyright (c) 2015 Bhaof Knight <me@knightmare.com>, Tomas W', ""if  letters[mid] > target:\n            right = mid - 1\n        result = letters[right]\n        result = result + '_1'\n        if target <> letters[mid]:\n            left = right + '_' + chamber\n        else:\n            right = mid - 1\n        chamber = result[0:""]","if  letters[mid] > target:
+            right = mid - 1
+        return letters[mid] + letters[left + right]
+
+class Records_Test(object):
+    'Records test cases'
+    table_name ='records'
+    field_name = 'id'
+    record_fields = '",False,199,False,False,2.0207176067551376
+"def search_insert(array, val):
+    low = 0
+    high = len(array) - 1
+    while low <=  high:
+        mid = low + (high - low) // 2",        if val > array[mid]:,"            low = mid + 1
+        else:
+            high = mid - 1
+    return low
+","['', '', '', '', '', '', '', '', '', '']",,False,28,True,False,0.0
+"def selection_sort(arr, simulation=False):
+    iteration = 0
+    if simulation:
+        print(""iteration"",iteration,"":"",*arr)
+        
+    for i in range(len(arr)):
+        minimum = i
+        ","        for j in range(i + 1, len(arr)):","            # ""Select"" the correct value
+            if arr[j] < arr[minimum]:
+                minimum = j
+
+        arr[minimum], arr[i] = arr[i], arr[minimum]
+        
+        if simulation:
+                iteration = iteration + 1
+                print(""iteration"",iteration,"":"",*arr)
+            
+    return arr
+","['', '', '', '', '', '', '', '', '', '']",,False,40,True,False,0.0
+"from tree import TreeNode
+
+
+def min_depth(self, root):
+    if root is None:
+        return 0
+    if root.left is not None or root.right is not None:
+        return max(self.minDepth(root.left), self.minDepth(root.right))+1
+    return min(self.minDepth(root.left), self.minDepth(root.right)) + 1
+
+
+def min_height(root):
+    if root is None:
+        return 0
+    height = 0
+    level = [root]
+    while level:
+        height += 1
+        new_level = []
+        for node in level:
+            if node.left is None and node.right is None:
+                return height
+            if node.left is not None:
+                new_level.append(node.left)
+            if node.right is not None:
+                new_level.append(node.right)",        level = new_level,"    return height
+
+
+def print_tree(root):
+    if root is not None:
+        print(root.val)
+        print_tree(root.left)
+        print_tree(root.right)","['', '', '', '', '', '', '', '', '', '']",,False,25,True,False,0.0
+"import random
+
+def bogo_sort(arr, simulation=False):
+    iteration = 0
+    if simulation:
+        print(""iteration"",iteration,"":"",*arr)",    ,"    def is_sorted(arr):
+        i = 0
+        arr_len = len(arr)
+        while i+1 < arr_len:
+            if arr[i] > arr[i+1]:
+                return False
+            i += 1
+            
+
+        return True
+    while not is_sorted(arr):
+        random.shuffle(arr)
+        
+        if simulation:
+            iteration = iteration + 1
+            print(""iteration"",iteration,"":"",*arr)
+            
+    return arr
+","['def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n    return arr[1:] <= arr[:-1]\n\n# http://www.geeksforgeeks.org/index.php?title=Main_Page_Form,\n    # http://www.geek', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            print()\n        \n        for i in range(1,arr_len-2):\n            for j in range(i, arr_len):\n                i+1,j+1 = amino_product(i,j', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n            if bogo_sort():\n                return False\n            iteration = 0\n            bogo_limit = 5000    \n        while bogo_limit >= len(str(len(arr))) and not is_sorted(arr):', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n        if arr not in [i*[True] for i in range(0,101)]:\n            print(""not sorted"", arr)\n        if is_sorted(i*[False]):\n            return False\n \n       \nprint(len(', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr) %f1\n        else:\n            rand = random.randint(0,10000)\n            if rand!=0:\n                continue\n            else:\n                while not bogo_sort.is_sorted(arr):\n                random.shuffle', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n\nfrom billy.coreblending.blending import *\n\ndef test_blendingtools_example():\n    num_tests = 5\n    num_inputs = len(range(2, 12', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*i-1)\n        else:\n            iteration = 0\n            print(""iteration"",0,""-1"",*arr)\n\n        for i in range(0,6):\n            if arr[i] == ""0"":\n                continue\n            else:', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n    \n    while True:\n        temp = arr.pop(0)\n        if bogo_cut(temp) == False:\n            return False\n        # print(""temp is"",temp,""temp is"",len(temp)+""d"")', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n        \n        if not i in range(0, 10):\n            break\n    return True\n\nif __name__ == ""__main__"":\n    n = input(""How many lines to output? "")\n\n    n = int(n)\n\n    with', 'def is_sorted(arr):\n        i = 0\n        arr_len = len(arr)\n        while i+1 < arr_len:\n            if arr[i] > arr[i+1]:\n                return False\n            i += 1\n            \n\n        return True\n    while not is_sorted(arr):\n        random.shuffle(arr)\n        \n        if simulation:\n            iteration = iteration + 1\n            print(""iteration"",iteration,"":"",*arr)\n        else:\n            print(""in random()"")\n    \n    i = 0\n    while not is_sorted(arr):\n        j = 0\n        while not is_sorted(arr[j]):\n            random.shuffle(arr)\n            if is']","def is_sorted(arr):
+        i = 0
+        arr_len = len(arr)
+        while i+1 < arr_len:
+            if arr[i] > arr[i+1]:
+                return False
+            i += 1
+            
+
+        return True
+    while not is_sorted(arr):
+        random.shuffle(arr)
+        
+        if simulation:
+            iteration = iteration + 1
+            print(""iteration"",iteration,"":"",*arr)
+    return arr[1:] <= arr[:-1]
+
+# http://www.geeksforgeeks.org/index.php?title=Main_Page_Form,
+    # http://www.geek",False,496,False,False,0.0
+"import copy
+
+def all_pairs_shortest_path(adjacency_matrix):
+    new_array = copy.deepcopy(adjacency_matrix)
+",    size = len(new_array),"    for k in range(size):
+        for i in range(size):
+            for j in range(size):
+                if new_array[i][j] > new_array[i][k] + new_array[k][j]:
+                    new_array[i][j] = new_array[i][k] + new_array[k][j]
+
+    return new_array
+","['', '', '', '', '', '', '', '', '', '']",,False,25,True,False,0.0
+"def radix_sort(arr, simulation=False):
+    position = 1
+    max_number = max(arr)
+
+    iteration = 0
+    if simulation:
+        print(""iteration"", iteration, "":"", *arr)
+
+    while position <= max_number:
+        queue_list = [list() for _ in range(10)]
+
+        for num in arr:
+            digit_number = num // position % 10
+            queue_list[digit_number].append(num)
+
+        index = 0
+        for numbers in queue_list:
+            for num in numbers:
+                arr[index] = num
+                index += 1
+
+        if simulation:
+            iteration = iteration + 1
+            print(""iteration"", iteration, "":"", *arr)
+",        position *= 10,"    return arr
+    ","['1\n                if limit_number and queue >= -limit_number:\n                    break\n\n        position += digit_number\n\n        for i in range(0', 'ights Reserved.\n#\n#    Licensed under the Apache License, Version 2.0 (the ""License""); you may\n#    not use this', 'ers:\n                    if pos >= start and pos <= end:\n                        return 1\n\n            iteration += 1\n        else:\n            return 0', 'arr[pos] = result\n\n        for index, x in enumerate(arr[position:])._sort():\n            position += 1\n            if x', 'queue_list:\n                queue.sort(key=lambda x: float(x[-1]), reverse=True)\n\n                print', 'dom.choice(queue)\n            arr[index] = new_queue\n\n        position += 1\n\n    return(arr)\n\ndef radi', 's = s + ""{:.2e}"".format(max(positions))\n            position', ""st:\n            heapq.heappush(queue, 'h')\n\n        pos = 0\n\n        while not queue:\n            heap"", 'results.append(arr[index])\n                index += 1\n\n            # for i in range(len(results)):\n            return results\n        else:', 'arr_copy.reverse()\n                number = array_pop(queue,index)\n                tmp_array = item_filter_empty(']","1
+                if limit_number and queue >= -limit_number:
+                    break
+
+        position += digit_number
+
+        for i in range(0",False,127,False,False,1.7179060012299232
+"import copy
+import math
+
+def maximum_flow_dfs(adjacency_matrix):
+    new_array = copy.deepcopy(adjacency_matrix)
+    total = 0
+
+    while True:
+        min = math.inf
+        visited = [0]*len(new_array)
+        path = [0]*len(new_array)
+
+        stack = []
+
+        visited[0] = 1
+        stack.append(0)
+
+        while len(stack) > 0:
+            src = stack.pop()
+            for k in range(len(new_array)):
+                if new_array[src][k] > 0 and visited[k] == 0:
+                    visited[k] = 1
+                    stack.append(k)
+                    path[k] = src
+
+        if visited[len(new_array) - 1] == 0:
+            break
+
+        tmp = len(new_array) - 1
+
+        while tmp != 0:
+            if min > new_array[path[tmp]][tmp]:
+                min = new_array[path[tmp]][tmp]
+            tmp = path[tmp]
+",        tmp = len(new_array) - 1,"
+        while tmp != 0:
+            new_array[path[tmp]][tmp] = new_array[path[tmp]][tmp] - min
+            tmp = path[tmp]
+
+        total = total + min
+
+    return total
+
+","['', '', '', '', '', '', '', '', '', '']",,False,32,True,False,0.0
+"def successor(root, node):
+    succ = None
+    while root:
+        if node.val < root.val:",            succ = root,"            root = root.left
+        else:
+            root = root.right
+    return succ
+","['', '', '', '', '', '', '', '', '', '']",,False,23,True,False,0.0
+"def find_min_rotate(array):
+    low = 0
+    high = len(array) - 1
+    while low < high:
+        mid = (low + high) // 2
+        if array[mid] > array[high]:
+            low = mid + 1
+        else:
+            high = mid
+
+    return array[low]
+
+def find_min_rotate_recur(array, low, high):
+    mid = (low + high) // 2
+    if mid == low:
+        return array[low]",    if array[mid] > array[high]:,"        return find_min_rotate_recur(array, mid + 1, high)
+    return find_min_rotate_recur(array, low, mid)
+","['return find_min_rotate_recur(array, mid + 1, high)\n    return _min_rotate_recur(board[mid], low, mid - 1)\n\nclass Node():\n    def __init__(self, value):\n        self.value = value\n\n    def __eq__(self, other):\n        return self.', 'return find_min_rotate_recur(array, mid + 1, high)\n    return min(find_min_rotate_recur(array[mid + 1:high]), key=lambda x:find_min(x, 0))\n\r\ndef find_min_rotate_recur(array, idx1, idx2', 'return find_min_rotate_recur(array, mid + 1, high)\n    return find_min_rotate_recur_v1(array, mid + 1, high, x_shift = 0)\n    #if mid == high:\n    #    return find_min_rotate_recur(array, low, high)', 'return find_min_rotate_recur(array, mid + 1, high)\n    return mid\n\nclass Solution():\n\n    def find_min_rotate_recur(self, arr, mid):\n        if not arr or not mid:\n            return 0\n        return get_min_rotate_recur(arr, mid-1)', 'return find_min_rotate_recur(array, mid + 1, high)\n    return (find_min_rotate_recur(array, mid + 1, high) +\n            find_min_rotate_recur(array, low + 1, mid)))\n          from datetime import datetime, timedelta\nimport numpy as np\nimport', 'return find_min_rotate_recur(array, mid + 1, high)\n    return mid\n\n\nif __name__ == ""__main__"":\n        import time\n        import datetime\n        import sys\n\n        # from IPython.Shell import IPShellEmbed\n        # ipshell = IPShellEmbed(argv=[], banner1=iplib.format_html', 'return find_min_rotate_recur(array, mid + 1, high)\n    return find_min_rotate_recur(array, mid + 1, high, -1)\n\ndef find_min_rotate_recur(array, start, end):\n    if start >= end:\n        return array[start]\n    mid', 'return find_min_rotate_recur(array, mid + 1, high)\n    return find_min_rotate_recur(array, mid, high - 1)\n\n# -*- coding: utf-8 -*-\n########################################################################\n#                                                                      #\n#   copyright 2002 Paul Henry Tremblay                                  #\n#', 'return find_min_rotate_recur(array, mid + 1, high)\n    return find_min(array, low, mid)\n\nclass Myint(int):\n    pass\n\nclass Mystr(str):\n    pass\n\n\nprint(""Let\'s think about {0}"".format(find_min_rotate_recur', 'return find_min_rotate_recur(array, mid + 1, high)\n    return find_min_rotate_recur(array, mid, low)\n\ndef find_min_rotate_recur(array, mid, low):\n    if low >= mid + 1:\n        return mid - 1\n\n    mid_i = mid']","return find_min_rotate_recur(array, mid + 1, high)
+    return _min_rotate_recur(board[mid], low, mid - 1)
+
+class Node():
+    def __init__(self, value):
+        self.value = value
+
+    def __eq__(self, other):
+        return self.",False,208,False,False,2.1891971610334866
+"class SegmentTree:
+    def __init__(self,arr,function):
+        self.segment = [0 for x in range(3*len(arr)+3)]
+        self.arr = arr
+        self.fn = function
+        self.make_tree(0,0,len(arr)-1)
+","    def make_tree(self,i,l,r):","        if l==r:
+            self.segment[i] = self.arr[l]
+        elif l<r:
+            self.make_tree(2*i+1,l,int((l+r)/2))
+            self.make_tree(2*i+2,int((l+r)/2)+1,r)
+            self.segment[i] = self.fn(self.segment[2*i+1],self.segment[2*i+2])
+
+    def __query(self,i,L,R,l,r):
+        if l>R or r<L or L>R or l>r:
+            return None
+        if L>=l and R<=r:
+            return self.segment[i]
+        val1 = self.__query(2*i+1,L,int((L+R)/2),l,r)
+        val2 = self.__query(2*i+2,int((L+R+2)/2),R,l,r)
+        print(L,R,"" returned "",val1,val2)
+        if val1 != None:
+            if val2 != None:
+                return self.fn(val1,val2)
+            return val1
+        return val2
+        
+
+    def query(self,L,R):
+        return self.__query(0,0,len(self.arr)-1,L,R)","['if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l,int((l+r)/2))\n        else:\n            tmp = self.segment[i] * self.arr[l+1].getC()\n            self.make_tree(tmp[0],tmp[1],int', ""if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l,int((l+r)/2)+2)\nfrom.utils import parse_timestamp\n\nclass Snmp(object):\n    def __init__(self):\n        self.snmp_list = ['timestamp','time','"", 'if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l,lambda (a): int(round(a*10)))\n        elif i>=r:\n            j = l\n            r = i\n        self.max = int((r-1)*2)\n        self.min = int((r-', ""if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,r,l+1)\n        else:\n            self.make_tree(2*i+2,l)\n            self.make_tree(2*i+1,l,'o')\n\n                                        if self.segment[i-"", 'if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,int((l+r)/3))\n            self.make_tree(2*i+2,int((l+r)/4))\n            for k in range(3):\n                self.make_tree(2*i,self.', 'if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l,int((l+r)/2))\n        else:\n            self.make_tree(r/2,l/2,int(arr[i+1]/2))\n            self.make_tree(r/2,l', 'if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l+r,8)\n            self.make_tree(R - i,i, l+r,16)\n        if i<r and j<r:\n            self.make_tree(r, i)\n            self.make', 'if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l+r,int((l+r)/2))\n            self.make_tree(2*i+3,(l+r),(r,(l+2*3)))\n        else:\n            raise(ValueError(""left index (={}) has', ""if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,r+i,int((-r)/2))-3*i))\n        else:\n            raise Exception('Left and Right cannot have more than 5 elements!')\n        if r == l:\n            self.make_tree(0,3*i"", 'if l==r:\n            self.segment[i] = self.arr[l]\n        elif l<r:\n            self.make_tree(2*i+1,l,int((l+r)/2))\n            self.make_tree(2*i+2,l,int((l+r)/2)+3))\n\n        if l<r:\n            for i in range(3*len(self.segment)+3):\n                self.segment[i] = self.segment[i] + segment']","if l==r:
+            self.segment[i] = self.arr[l]
+        elif l<r:
+            self.make_tree(2*i+1,l,int((l+r)/2))
+            self.make_tree(2*i+2,l,int((l+r)/2))
+        else:
+            tmp = self.segment[i] * self.arr[l+1].getC()
+            self.make_tree(tmp[0],tmp[1],int",False,254,False,False,3.4767454125091675
+"from enum import Enum
+
+
+class TraversalState(Enum):
+    WHITE = 0
+    GRAY = 1
+    BLACK = 2
+
+def is_in_cycle(graph, traversal_states, vertex):
+    if traversal_states[vertex] == TraversalState.GRAY:
+        return True
+    traversal_states[vertex] = TraversalState.GRAY
+    for neighbor in graph[vertex]:
+        if is_in_cycle(graph, traversal_states, neighbor):
+            return True
+    traversal_states[vertex] = TraversalState.BLACK
+    return False
+
+",def contains_cycle(graph):,"    traversal_states = {vertex: TraversalState.WHITE for vertex in graph}
+    for vertex, state in traversal_states.items():
+        if (state == TraversalState.WHITE and
+           is_in_cycle(graph, traversal_states, vertex)):
+            return True
+    return False
+","['traversal_states = {vertex : [] for vertex in [1,5],\n\t# vertex1\n\t""0(0,0)"" : [],\n\t# vertex2\n\t""0(0,0,0)"" : (1,0,0', 'traversal_states = {vertex : [0.01, 0.01], \n                        edge : [0.00, 0.00], \n                        time : [0.00, 0.00],\n                        depth_first_search : [0.75, 0.75]}', ""traversal_states = {vertex: {'distance': -10, 'value': -5}}\n\nclass DirectedGraph:\n    def __init__(self, vertex_name, directed_graph=None, vertex_id=None, direction=None):\n        if directed"", 'traversal_states = {vertex: 0 for vertex in ""ABCCED""} # type: int\n                                            \n#    H E L P E R E C E S \n#    | /, /\n#    +,\n#    /\n#    |,', ""traversal_states = {vertex:0 for vertex in [start, goal, end]:\n\n    {\n        0: 'Start',1: 'D',\n        'D': 'Goal',2: 'Start_C',\n        'A' : 'Start',3: '"", 'traversal_states = {vertex:0 for vertex in range(10)}\n\ndef is_traversal_states_bidirectional(state_1, state_2, state_3):\n    return tuple(state_1[nbr]!= state_2[nbr', 'traversal_states = {vertex for vertexlist in (\n                    itertools, \n                    range, \n                    zip, \n                    map, \n                    deque, \n                    itertools.chain):\n    (-2, -1, True, False)\n     (None, (), lambda a, b: b, lambda a', ""traversal_states = {vertex: [[]],\n                               [vertex],\n                               [vertex]]\nimport operator\n\n# Given a binary tree, determine where each node's attribute is\n# contained in the traversal_state of the given binary tree. If the attribute\n# doesn't"", 'traversal_states = {vertex:None for vertex in range(2**num_of_vertices/2**8, 0,2**num_of_vertices, 8**8-1)}\n\n# Definition for sieve.py\nclass Node(object', 'traversal_states = {vertex for vertex in traversal_vertices_by_node_size_size}\n\nfrom sympy import sqrt, pi, Function, Symbol, diff, Rational, asin, Symbol, S, solve_linear_system_LU, solve, expand']","traversal_states = {vertex : [] for vertex in [1,5],
+	# vertex1
+	""0(0,0)"" : [],
+	# vertex2
+	""0(0,0,0)"" : (1,0,0",False,100,False,False,1.3339264902154053
+"def counting_sort(arr):
+    m = min(arr)
+    different = 0
+    if m < 0:
+        different = -m
+        for i in range(len(arr)):
+            arr[i] += -m
+    k = max(arr)
+    temp_arr = [0] * (k + 1)
+    for i in range(0, len(arr)):
+        temp_arr[arr[i]] = temp_arr[arr[i]] + 1
+
+    for i in range(1, k + 1):
+        temp_arr[i] = temp_arr[i] + temp_arr[i - 1]
+
+    result_arr = arr.copy()","    for i in range(len(arr) - 1, -1, -1):","        result_arr[temp_arr[arr[i]] - 1] = arr[i] - different
+        temp_arr[arr[i]] = temp_arr[arr[i]] - 1
+
+    return result_arr
+","[""----------------------------------------------------------\n#\n# ===================================================================\n\ndef find_common_prefix(string, start_with_prefix=''):\n    i, last_ = 0, 0\n    for i"", 'ounting_sort(temp_arr)\n    if different not in (False, True):\n        for i in range(k % 2, k - 2):', ""# ---------------------------------------------------------------------------------------------------\ndef print_result_summary(str_result):\n    for name in ['correct'] + str_result.results:\n        if name"", 'ique_colors(arr):\n    colors_set = set()\n    for i in range(len(arr)):\n        for j in range(0, 2):\n            if', 'olfgang Huang <osd@foosel.net>\nCreated: 2016-12-11\n""""""\nimport numpy as np\nimport', '):\n        k - 1 - j1\n            k = j1\n            temp_arr[j-1-i] = temp_arr[j-1', 'ind_longest_path(arr):\n#     m = 0\n#     mrow, mcol = min(arr, key=itemgetter(0', 'temp_arr) - {0}) & (k + 1):\n        if (len(temp_arr) - {k}) & ((type(temp_', ']\n\n\n# @ignore_unicode_prefix\ndef is_text_like_columns(a, b):\n    """"""\n    is_text_like_', 'an_range(arr):\n    m = min(arr)\n    different = 0\n    if m < 0:\n        different = -m\n        for i in range(']","----------------------------------------------------------
+#
+# ===================================================================
+
+def find_common_prefix(string, start_with_prefix=''):
+    i, last_ = 0, 0
+    for i",False,197,False,False,1.1919590903897295

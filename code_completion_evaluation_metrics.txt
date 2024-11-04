@@ -1,0 +1,6 @@
+Pass@1: 46.00
+Pass@10: 2.00
+Exact Match: 0.02
+Syntax Match: 0.02
+Average BLEU: 1.35
+Average Levenshtein: 164.80
